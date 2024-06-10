@@ -181,12 +181,11 @@
 
         autoshift {
             bindings = <
-&trans  &as Q  &as W  &as E   &as R   &as T     &as Y   &as U   &as I          &as O             &as P         &rhold LEFT_BRACE RIGHT_BRACE
-&trans  &as A  &as S  &as D   &as F   &as G     &as H   &as J   &as K          &as L             &as COLON     &as DOUBLE_QUOTES
-&trans  &as Z  &as X  &as C   &as V   &as B     &as N   &as M   &as LESS_THAN  &as GREATER_THAN  &as QUESTION  &kp RSHFT
-                      &trans  &trans  &trans    &trans  &trans  &trans
+&kp TILDE  &as Q  &as W  &as E   &as R   &as T     &as Y   &as U   &as I          &as O             &as P         &rhold LEFT_BRACE RIGHT_BRACE
+&trans     &as A  &as S  &as D   &as F   &as G     &as H   &as J   &as K          &as L             &as COLON     &as DOUBLE_QUOTES
+&trans     &as Z  &as X  &as C   &as V   &as B     &as N   &as M   &as LESS_THAN  &as GREATER_THAN  &as QUESTION  &kp RSHFT
+                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
 };
-
