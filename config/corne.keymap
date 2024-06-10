@@ -63,6 +63,11 @@
 	};
 };
 
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/rgb.h>
+
 / {
     macros {
         rgb_layer: rgb_layer {
@@ -154,10 +159,10 @@
 
         base {
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E         &kp R                                       &kp T        &kp Y      &kp U          &kp I      &kp O                      &kp P                   &rhold RIGHT_BRACKET LEFT_BRACKET
-&kp LCTRL       &kp A  &kp S  &kp D         &kp F                                       &kp G        &kp H      &kp J          &kp K      &kp L                      &rhold COLON SEMICOLON  &rhold DOUBLE_QUOTES SQT
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C         &kp V                                       &kp B        &kp N      &kp M          &kp COMMA  &rhold EXCLAMATION PERIOD  &kp SLASH               &kp ESCAPE
-                              &kp LEFT_ALT  &rgb_layer RGB_COLOR_HSB_VAL(256,100,50) 1  &kp ENTER    &kp SPACE  &kp BACKSPACE  &kp F5
+&kp TAB           &kp Q  &kp W  &kp E         &kp R                                      &kp T        &kp Y      &kp U          &kp I      &kp O                      &kp P                   &rhold RIGHT_BRACKET LEFT_BRACKET
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F                                      &kp G        &kp H      &kp J          &kp K      &kp L                      &rhold COLON SEMICOLON  &rhold DOUBLE_QUOTES SQT
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C         &kp V                                      &kp B        &kp N      &kp M          &kp COMMA  &rhold EXCLAMATION PERIOD  &kp SLASH               &kp ESCAPE
+                                &kp LEFT_ALT  &rgb_layer RGB_COLOR_HSB_VAL(256,57,44) 1  &kp ENTER    &kp SPACE  &kp BACKSPACE  &kp F5
             >;
         };
 
