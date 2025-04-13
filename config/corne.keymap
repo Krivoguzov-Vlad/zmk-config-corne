@@ -163,7 +163,7 @@
 
         raise {
             bindings = <
-&rhold GRAVE TILDE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7         &kp N8        &kp N9        &kp N0  &rhold MINUS EQUAL
+&rhold TILDE GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7         &kp N8        &kp N9        &kp N0  &rhold MINUS EQUAL
 &trans              &trans        &trans        &trans        &trans        &trans    &trans        &kp NUMBER_4   &kp N5        &kp NUMBER_6  &trans  &trans
 &trans              &trans        &trans        &trans        &trans        &trans    &trans        &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
                                                 &trans        &trans        &trans    &kp DELETE    &kp RIGHT_WIN  &mo 3
