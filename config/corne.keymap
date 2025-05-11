@@ -107,6 +107,41 @@
 
             label = "SHIFT";
         };
+
+        not_eq: not_eq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCLAMATION &kp EQUAL>;
+            label = "NOT_EQ";
+        };
+
+        go_new_var: go_new_var {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp EQUAL>;
+            label = "GO_NEW_VAR";
+        };
+
+        eq_eq: eq_eq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp EQUAL>;
+            label = "EQ_EQ";
+        };
+
+        gt_eq: gt_eq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GT &kp EQUAL>;
+            label = "GT_EQ";
+        };
+
+        lt_eq: lt_eq {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LT &kp EQUAL>;
+            label = "LT_EQ";
+        };
     };
 
     behaviors {
@@ -154,19 +189,19 @@
 
         base {
             bindings = <
-&kp TAB         &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y          &kp U      &kp I      &kp O                      &kp P                   &rhold RIGHT_BRACKET LEFT_BRACKET
-&kp LCTRL       &kp A  &kp S  &kp D  &kp F         &kp G        &kp H          &kp J      &kp K      &kp L                      &rhold COLON SEMICOLON  &rhold DOUBLE_QUOTES SQT
-&kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V         &kp B        &kp N          &kp M      &kp COMMA  &rhold EXCLAMATION PERIOD  &kp SLASH               &kp LG(SPACE)
+&kp TAB         &as Q  &as W  &as E  &as R         &as T        &as Y          &as U      &as I      &as O    &as P                   &rhold RIGHT_BRACKET LEFT_BRACKET
+&kp LCTRL       &as A  &as S  &as D  &as F         &as G        &as H          &as J      &as K      &as L    &rhold COLON SEMICOLON  &rhold DOUBLE_QUOTES SQT
+&kp LEFT_SHIFT  &as Z  &as X  &as C  &as V         &as B        &as N          &as M      &as COMMA  &as DOT  &as SLASH               &kp LG(SPACE)
                               &mo 1  &kp LEFT_ALT  &kp SPACE    &kp BACKSPACE  &kp ENTER  &mo 2
             >;
         };
 
         raise {
             bindings = <
-&rhold TILDE GRAVE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5    &kp NUMBER_6  &kp N7         &kp N8        &kp N9        &kp N0  &rhold MINUS EQUAL
-&trans              &trans        &trans        &trans        &trans        &trans    &trans        &kp NUMBER_4   &kp N5        &kp NUMBER_6  &trans  &trans
-&trans              &trans        &trans        &trans        &trans        &trans    &trans        &kp NUMBER_1   &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-                                                &trans        &trans        &trans    &kp DELETE    &kp RIGHT_WIN  &mo 3
+&as GRAVE   &as NUMBER_1  &as NUMBER_2  &as NUMBER_3  &as NUMBER_4  &as N5     &as NUMBER_6     &as N7         &as N8        &as N9        &as N0  &as MINUS
+&kp LCTRL   &lt_eq        &not_eq       &eq_eq        &gt_eq        &kp DOT    &go_new_var      &as NUMBER_4   &as N5        &as NUMBER_6  &trans  &as EQUAL
+&kp LSHIFT  &trans        &trans        &trans        &trans        &trans     &kp PRINTSCREEN  &as NUMBER_1   &as NUMBER_2  &as NUMBER_3  &as N0  &trans
+                                        &trans        &trans        &trans     &kp BACKSPACE    &kp RIGHT_WIN  &mo 3
             >;
         };
 
@@ -182,9 +217,9 @@
         layer_4 {
             bindings = <
 &bt BT_CLR_ALL  &trans        &trans        &trans        &trans        &trans          &trans          &trans             &trans           &trans      &trans      &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &kp C_PLAY  &trans
-&trans  &trans        &trans        &trans        &trans        &trans          &trans          &trans             &trans           &trans      &trans      &trans
-                                    &trans        &trans        &trans          &trans          &trans             &trans
+&trans          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &kp C_PLAY  &trans
+&trans          &trans        &trans        &trans        &trans        &trans          &trans          &trans             &trans           &trans      &trans      &trans
+                                            &trans        &trans        &trans          &trans          &trans             &trans
             >;
         };
 
