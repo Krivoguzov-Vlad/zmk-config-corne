@@ -204,10 +204,10 @@
 
         raise {
             bindings = <
-&as GRAVE   &as NUMBER_1  &as NUMBER_2  &as NUMBER_3  &as NUMBER_4  &as N5     &as NUMBER_6     &as N7         &as N8        &as N9        &as N0  &as MINUS
-&kp LCTRL   &lt_eq        &not_eq       &eq_eq        &gt_eq        &kp DOT    &go_new_var      &as NUMBER_4   &as N5        &as NUMBER_6  &trans  &as EQUAL
-&kp LSHIFT  &trans        &trans        &trans        &trans        &trans     &kp PRINTSCREEN  &as NUMBER_1   &as NUMBER_2  &as NUMBER_3  &as N0  &trans
-                                        &trans        &trans        &trans     &kp BACKSPACE    &kp RIGHT_WIN  &mo 3
+&as GRAVE   &none                        &none                    &none                 &none                   &none                      &none                  &none                      &none                     &none                             &kp NON_US_BACKSLASH               &kp EQUAL
+&kp LCTRL   &rhold EXCLAMATION NUMBER_1  &rhold AT_SIGN NUMBER_2  &rhold HASH NUMBER_3  &rhold DOLLAR NUMBER_4  &rhold PERCENT NUMBER_5    &rhold CARET NUMBER_6  &rhold AMPERSAND NUMBER_7  &rhold ASTERISK NUMBER_8  &rhold LEFT_PARENTHESIS NUMBER_9  &rhold RIGHT_PARENTHESIS NUMBER_0  &kp MINUS
+&kp LSHIFT  &trans                       &trans                   &trans                &trans                  &none                      &kp PRINTSCREEN        &none                      &kp SEMICOLON             &kp PERIOD                        &none                              &trans
+                                                                  &trans                &kp LEFT_ALT            &trans                     &kp BACKSPACE          &kp RIGHT_WIN              &mo 3
             >;
         };
 
@@ -239,4 +239,5 @@
         };
     };
 };
+
 
