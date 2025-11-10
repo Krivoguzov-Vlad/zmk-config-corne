@@ -195,9 +195,9 @@
 
         base {
             bindings = <
-&kp TAB         &as Q  &as W  &as E  &as R         &as T        &as Y          &as U      &as I      &as O    &as P                   &rhold RIGHT_BRACKET LEFT_BRACKET
-&kp LCTRL       &as A  &as S  &as D  &as F         &as G        &as H          &as J      &as K      &as L    &rhold COLON SEMICOLON  &rhold DOUBLE_QUOTES SQT
-&kp LEFT_SHIFT  &as Z  &as X  &as C  &as V         &as B        &as N          &as M      &as COMMA  &as DOT  &as SLASH               &kp LG(SPACE)
+&kp TAB         &kp Q  &kp W  &kp E  &kp R         &kp T        &kp Y          &kp U      &kp I      &kp O    &kp P                   &rhold RIGHT_BRACKET LEFT_BRACKET
+&kp LCTRL       &kp A  &kp S  &kp D  &kp F         &kp G        &kp H          &kp J      &kp K      &kp L    &rhold COLON SEMICOLON  &rhold DOUBLE_QUOTES SQT
+&kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V         &kp B        &kp N          &kp M      &kp COMMA  &kp DOT  &kp SLASH               &kp LG(SPACE)
                               &mo 1  &kp LEFT_ALT  &kp SPACE    &kp BACKSPACE  &kp ENTER  &mo 2
             >;
         };
